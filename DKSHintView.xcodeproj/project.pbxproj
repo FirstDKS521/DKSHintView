@@ -21,6 +21,10 @@
 		617963E31FF6573500EF0AFB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6135736B1FF62FBF006D133C /* MBProgressHUD.m */; };
 		617CB7A51FF4DCE20031F384 /* UIScrollView+HintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 617CB7A41FF4DCE20031F384 /* UIScrollView+HintView.m */; };
 		617CB7AB1FF4ED370031F384 /* UIView+DKSFrameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 617CB7AA1FF4ED370031F384 /* UIView+DKSFrameTool.m */; };
+		61974B4A1FFB6134002F3844 /* TotalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61974B481FFB6134002F3844 /* TotalController.m */; };
+		61974B4B1FFB6134002F3844 /* TotalController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61974B491FFB6134002F3844 /* TotalController.xib */; };
+		61974B4F1FFB6BDD002F3844 /* CustomController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61974B4D1FFB6BDD002F3844 /* CustomController.m */; };
+		61974B501FFB6BDD002F3844 /* CustomController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61974B4E1FFB6BDD002F3844 /* CustomController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,12 @@
 		617CB7A41FF4DCE20031F384 /* UIScrollView+HintView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+HintView.m"; sourceTree = "<group>"; };
 		617CB7A91FF4ED370031F384 /* UIView+DKSFrameTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+DKSFrameTool.h"; sourceTree = "<group>"; };
 		617CB7AA1FF4ED370031F384 /* UIView+DKSFrameTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+DKSFrameTool.m"; sourceTree = "<group>"; };
+		61974B471FFB6134002F3844 /* TotalController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TotalController.h; sourceTree = "<group>"; };
+		61974B481FFB6134002F3844 /* TotalController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TotalController.m; sourceTree = "<group>"; };
+		61974B491FFB6134002F3844 /* TotalController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalController.xib; sourceTree = "<group>"; };
+		61974B4C1FFB6BDD002F3844 /* CustomController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomController.h; sourceTree = "<group>"; };
+		61974B4D1FFB6BDD002F3844 /* CustomController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomController.m; sourceTree = "<group>"; };
+		61974B4E1FFB6BDD002F3844 /* CustomController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,10 +134,16 @@
 				612446D51FF0F2D900491C8C /* AppDelegate.m */,
 				613573711FF6386E006D133C /* RootViewController.h */,
 				613573721FF6386E006D133C /* RootViewController.m */,
-				612446DA1FF0F2D900491C8C /* Main.storyboard */,
 				617963DE1FF64E7E00EF0AFB /* ImageController.h */,
 				617963DF1FF64E7E00EF0AFB /* ImageController.m */,
 				617963E01FF64E7E00EF0AFB /* ImageController.xib */,
+				61974B471FFB6134002F3844 /* TotalController.h */,
+				61974B481FFB6134002F3844 /* TotalController.m */,
+				61974B491FFB6134002F3844 /* TotalController.xib */,
+				61974B4C1FFB6BDD002F3844 /* CustomController.h */,
+				61974B4D1FFB6BDD002F3844 /* CustomController.m */,
+				61974B4E1FFB6BDD002F3844 /* CustomController.xib */,
+				612446DA1FF0F2D900491C8C /* Main.storyboard */,
 				612446DD1FF0F2D900491C8C /* Assets.xcassets */,
 				612446DF1FF0F2D900491C8C /* LaunchScreen.storyboard */,
 				612446E21FF0F2D900491C8C /* Info.plist */,
@@ -284,7 +300,9 @@
 			files = (
 				612446E11FF0F2D900491C8C /* LaunchScreen.storyboard in Resources */,
 				612446DE1FF0F2D900491C8C /* Assets.xcassets in Resources */,
+				61974B501FFB6BDD002F3844 /* CustomController.xib in Resources */,
 				612446DC1FF0F2D900491C8C /* Main.storyboard in Resources */,
+				61974B4B1FFB6134002F3844 /* TotalController.xib in Resources */,
 				617963E21FF64E7E00EF0AFB /* ImageController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,8 +330,10 @@
 			files = (
 				617963E31FF6573500EF0AFB /* MBProgressHUD.m in Sources */,
 				617CB7A51FF4DCE20031F384 /* UIScrollView+HintView.m in Sources */,
+				61974B4F1FFB6BDD002F3844 /* CustomController.m in Sources */,
 				613573731FF6386E006D133C /* RootViewController.m in Sources */,
 				617963E11FF64E7E00EF0AFB /* ImageController.m in Sources */,
+				61974B4A1FFB6134002F3844 /* TotalController.m in Sources */,
 				614A96E21FF21E55002C8D9A /* DKSHintView.m in Sources */,
 				612446E41FF0F2D900491C8C /* main.m in Sources */,
 				617CB7AB1FF4ED370031F384 /* UIView+DKSFrameTool.m in Sources */,

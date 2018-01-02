@@ -1,23 +1,23 @@
 //
-//  ImageController.m
+//  TotalController.m
 //  DKSHintView
 //
-//  Created by aDu on 2017/12/29.
-//  Copyright © 2017年 DuKaiShun. All rights reserved.
+//  Created by aDu on 2018/1/2.
+//  Copyright © 2018年 DuKaiShun. All rights reserved.
 //
 
-#import "ImageController.h"
-#import "MBProgressHUD.h"
+#import "TotalController.h"
 #import "UIScrollView+HintView.h"
+#import "MBProgressHUD.h"
 
-@interface ImageController ()
+@interface TotalController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataAry;
 
 @end
 
-@implementation ImageController
+@implementation TotalController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,9 +28,7 @@
     }
     [self loadData];
     [self hideExtraCellLine:self.tableView];
-    self.tableView.hintView = [DKSHintView showHintViewWithImageStr:@"noData" titleStr:@"暂未获取到相关数据"];
-    //或者使用这个方法
-//    self.tableView.hintView = [DKSHintView showHintViewWithImageStr:@"noData" titleStr:@"暂未获取到相关数据" btnTitleStr:nil target:nil action:nil];
+        self.tableView.hintView = [DKSHintView showHintViewWithImageStr:@"noData" titleStr:@"暂未获取到相关数据" btnTitleStr:@"重新加载" target:self action:@selector(loadData)];
 }
 
 #pragma mark ====== 加载数据 ======
@@ -76,7 +74,6 @@
     });
 }
 
-#pragma mark ====== 删除数据 ======
 - (IBAction)deleteData:(id)sender {
     if (self.dataAry.count > 0) {
         [self.dataAry removeLastObject];

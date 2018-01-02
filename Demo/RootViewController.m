@@ -8,6 +8,8 @@
 
 #import "RootViewController.h"
 #import "ImageController.h"
+#import "TotalController.h"
+#import "CustomController.h"
 
 //状态栏和导航栏的总高度
 #define StatusNav_Height (isIphoneX ? 88 : 64)
@@ -27,16 +29,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"占位图";
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.translucent = NO;
 //    self.automaticallyAdjustsScrollViewInsets = NO;
     
-    self.dataAry = @[@"只显示图片",
-                     @"只显示文案",
-                     @"只显示按钮",
-                     @"显示图片、文案",
-                     @"显示文案、按钮",
-                     @"显示所有控件"];
+    self.dataAry = @[@"显示图片、文案",
+                     @"显示所有控件",
+                     @"自定义显示控件"];
 
     [self.view addSubview:self.tableView];
 }
@@ -53,10 +53,24 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger row = indexPath.row;
+    NSString *titleStr = self.dataAry[row];
     switch (row) {
         case 0: {
             ImageController *imgVC = [[ImageController alloc] init];
+            imgVC.title = titleStr;
             [self.navigationController pushViewController:imgVC animated:YES];
+        }
+            break;
+        case 1: {
+            TotalController *totalVC = [[TotalController alloc] init];
+            totalVC.title = titleStr;
+            [self.navigationController pushViewController:totalVC animated:YES];
+        }
+            break;
+        case 2: {
+            CustomController *customVC = [[CustomController alloc] init];
+            customVC.title = titleStr;
+            [self.navigationController pushViewController:customVC animated:YES];
         }
             break;
         default:

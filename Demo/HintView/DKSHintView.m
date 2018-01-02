@@ -26,6 +26,8 @@ static CGFloat imgWidth = 50.0; //图片宽高
 @property (nonatomic, strong) UIImageView *hintImage;
 @property (nonatomic, strong) UILabel *hintLabel;
 @property (nonatomic, strong) UIButton *hintBtn;
+/** 自定义显示视图 */
+@property (nonatomic, strong) UIView *customView;
 
 @end
 
@@ -46,8 +48,8 @@ static CGFloat imgWidth = 50.0; //图片宽高
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    
-    self.center = self.superview.center;
+    self.centerX = self.superview.width * 0.5;
+    self.centerY = self.superview.height * 0.5;
     CGFloat centerX = self.width * 0.5;
     self.hintImage.centerX = centerX;
     self.hintLabel.centerX = centerX;
@@ -69,13 +71,6 @@ static CGFloat imgWidth = 50.0; //图片宽高
     return hintView;
 }
 
-//只显示按钮
-+ (instancetype)showHintViewWithBtnTitleStr:(NSString *)btnTitleStr target:(id)target action:(SEL)action {
-    DKSHintView *hintView = [[self alloc] init];
-    [hintView showHintViewWithImageStr:nil titleStr:nil btnTitleStr:btnTitleStr target:target action:action];
-    return hintView;
-}
-
 //显示图片、提示文案
 + (instancetype)showHintViewWithImageStr:(NSString *)imageStr titleStr:(NSString *)titleStr {
     DKSHintView *hintView = [[self alloc] init];
@@ -90,11 +85,18 @@ static CGFloat imgWidth = 50.0; //图片宽高
     return hintView;
 }
 
-//总的方法
+#pragma mark ====== 总的方法 ======
 + (instancetype)showHintViewWithImageStr:(NSString *)imageStr titleStr:(NSString *)titleStr btnTitleStr:(NSString *)btnTitleStr target:(id)target action:(SEL)action {
     DKSHintView *hintView = [[self alloc] init];
     [hintView showHintViewWithImageStr:imageStr titleStr:titleStr btnTitleStr:btnTitleStr target:target action:action];
     return hintView;
+}
+
+#pragma mark ====== 自定义显示的视图 ======
++ (void)showHintViewWithCustomView:(UIView *)customView imageStr:(NSString *)imageStr titleStr:(NSString *)titleStr btnTitleStr:(NSString *)btnTitleStr target:(id)target action:(SEL)action {
+    DKSHintView *hintView = [DKSHintView showHintViewWithImageStr:imageStr titleStr:titleStr btnTitleStr:btnTitleStr target:target action:action];
+    hintView.customView = customView;
+    [customView addSubview:hintView];
 }
 
 #pragma mark ====== 共同处理 ======

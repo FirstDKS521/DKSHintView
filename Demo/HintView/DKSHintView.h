@@ -32,16 +32,6 @@
 + (instancetype)showHintViewWithTitleStr:(NSString *)titleStr;
 
 /**
- 只显示按钮
- 
- @param btnTitleStr 按钮文案
- @param target 响应的对象
- @param action 执行的方法
- @return 返回一个占位图
- */
-+ (instancetype)showHintViewWithBtnTitleStr:(NSString *)btnTitleStr target:(id)target action:(SEL)action;
-
-/**
  显示图片、提示文案
 
  @param imageStr 图片名称
@@ -72,5 +62,17 @@
  @return 返回一个占位图
  */
 + (instancetype)showHintViewWithImageStr:(NSString *)imageStr titleStr:(NSString *)titleStr btnTitleStr:(NSString *)btnTitleStr target:(id)target action:(SEL)action;
+
+/**
+ 自定义一个需要显示占位图的视图
+
+ @param customView 定义的视图
+ @param imageStr 图片名称
+ @param titleStr 提示文案
+ @param btnTitleStr 按钮文案
+ @param target 相应事件的对象
+ @param action 相应事件的方法
+ */
++ (void)showHintViewWithCustomView:(UIView *)customView imageStr:(NSString *)imageStr titleStr:(NSString *)titleStr btnTitleStr:(NSString *)btnTitleStr target:(id)target action:(SEL)action;
 
 @end
