@@ -1,6 +1,6 @@
 #iOS开发：占位图的实现（一行代码调用，无需手动隐藏显示）
 
-![效果1.png](http://upload-images.jianshu.io/upload_images/1840399-ccf7197e3c6059a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)     ![效果GIF.gif](http://upload-images.jianshu.io/upload_images/1840399-4adeff943e66157b.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![效果1.png](http://upload-images.jianshu.io/upload_images/1840399-910082dc28a98fb9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)     ![效果GIF.gif](http://upload-images.jianshu.io/upload_images/1840399-4adeff943e66157b.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 如果`UITableView`、`UICollectionView`需要显示占位图，只需要下面一行代码调用即可
 
